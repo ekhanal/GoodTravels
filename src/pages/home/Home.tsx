@@ -14,7 +14,7 @@ const Home = () => {
     <Slider />
     <DomesticDestinations />
     <InternationalDestination />
-    <Recommendation />
+    {/* <Recommendation /> */}
     <Stories />
     </>
   )
