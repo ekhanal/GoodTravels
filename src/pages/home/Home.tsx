@@ -10,7 +10,7 @@ import InternationalDestination1 from "../../components/home/InternationalDestin
 import TravelDeals from "../../components/home/TravelDeals"
 
 
-// import Display from "../../components/new/Display"
+import Display from "../../components/new/Display"
 
 
 
@@ -32,9 +32,9 @@ const Home = () => {
     <Slider />
     <DomesticDestinations />
     <InternationalDestination />
-    <Recommendation />
+    {/* <Recommendation /> */}
     <Stories />
-   <Display/> */}
+   <Display/> 
 
     </>
   )
