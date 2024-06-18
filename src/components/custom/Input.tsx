@@ -1,15 +1,15 @@
-interface Props{
-    type:string,
-    placeholder:string,
-    className:string,
-}
-const Input:React.FC<Props> = ({type,placeholder,className}) => {
-  return (
-    <div>
-        <input type={type} placeholder={placeholder} className={className}/>
+// interface Props{
+//     type:string,
+//     placeholder:string,
+//     className:string,
+// }
+// const Input:React.FC<Props> = ({type,placeholder,className}) => {
+//   return (
+//     <div>
+//         <input type={type} placeholder={placeholder} className={className}/>
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default Input
+// export default Input

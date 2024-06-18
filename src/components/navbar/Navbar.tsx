@@ -37,7 +37,7 @@ const Navbar = () => {
           <ul
             className={`${
               menuOpen
-                ? "block fixed top-14 left-0 right-0 bg-blue-400 z-10 transition-all duration-300 md:relative md:fles md:space-x-4 md:bg-transparent md:p-0"
+                ? "block fixed top-14 left-0 right-0 bg-blue-400 z-10 transition-all duration-300 md:relative md:flex  md:space-x-4 md:bg-transparent md:p-0"
                 : "hidden md:flex md:space-x-4"
             } space-y-2 md:space-y-0 w-full md:w-auto p-4 md:p-0 items-center justify-center text-xs md:text-sm`}
           >
