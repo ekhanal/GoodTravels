@@ -103,7 +103,7 @@ export const LalitpurData=[
 export const TravelData=[
   {
     name: "Annapurna Poonhill Sunrise Trek",
-    price:"Rs.",
+    price:"Rs.1000",
     description: "7 Days 6 Nights ",
     image: Annapurna,
     label: "Featured",
@@ -111,7 +111,7 @@ export const TravelData=[
   },
   {
     name: "Everest Gokyo Lake Trek",
-    price:"Rs. ",
+    price:"Rs. 1500",
     description: "15 Days 14 Nights ",
     image: Gokyo,
     label: "Featured",
@@ -119,7 +119,7 @@ export const TravelData=[
   },
   {
     name: "Best Island of Thailand",
-    price:"Rs. ",
+    price:"Rs. 1000",
     description: "5 Nights 6 Days ",
     image: Thailand ,
     label: "Featured",

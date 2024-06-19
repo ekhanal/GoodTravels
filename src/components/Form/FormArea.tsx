@@ -31,7 +31,7 @@ const FormArea = () => {
             <Tab className="outline-none">
               {({ selected }) => (
                 <Button
-                  title={"Helicopter"}
+                  title={"Mountains Flights"}
                   styles={` text-black px-4 py-1  ${
                     selected
                       ? "text-white bg-[#ec131b] "

@@ -1,5 +1,7 @@
 import { TravelData } from "../../constants/CardData";
 import TravelDealCard from "../custom/TravelDealCard";
+
+
 const TravelDeals = () => {
   return (
     <div>

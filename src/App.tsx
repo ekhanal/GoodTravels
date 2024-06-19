@@ -18,6 +18,7 @@ function App() {
         <Routes>
         <Route path={PATH.home} element={<Home />} />
         </Routes>
+       
         <Footer />
       
    

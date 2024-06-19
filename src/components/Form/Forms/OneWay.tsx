@@ -30,7 +30,7 @@ const OneWay = () => {
     <div>
       <FormProvider {...methods}>
         <form onSubmit={methods.handleSubmit(onSubmit)}>
-          <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 px-4 pt-4">
+          <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2  gap-5 px-4 pt-4">
             <div className="w-full md:w-fit ">
               <label htmlFor="Orgin" className="font-medium text-white text-xs">
                 Orgin

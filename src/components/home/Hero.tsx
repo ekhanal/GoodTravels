@@ -16,13 +16,9 @@ const Hero = () => {
             Let the journey begin
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl">Travel And Experience Amazing Destinations</p>
-          <div className="flex justify-center flex-wrap pt-6 gap-2 sm:gap-3 md:gap-4 lg:gap-6 pb-6 sm:pb-8 md:pb-10 lg:pb-12">
-            <Button name={"Flight"} className={"text-base sm:text-lg md:text-xl lg:text-2xl py-2 px-4 rounded focus:outline-none border "}  />
-            <Button name={"Helicopter"} className={"text-base sm:text-lg md:text-xl lg:text-2xl py-2 px-4 rounded focus:outline-none border "} />
-            <Button name={"Tour Package"} className={"text-base sm:text-lg md:text-xl lg:text-2xl py-2 px-4 rounded focus:outline-none border"} />
-            <Button name={"Vehicle"}  className={"text-base sm:text-lg md:text-xl lg:text-2xl py-2 px-4 rounded focus:outline-none border "}/>
-           
-          <div className="text-start px-5 py-5 lg:px-8 xl:px-32  ">
+       
+           <div className="flex justify-center">
+          <div className="max-w-7xl text-start px-5 py-5 lg:px-8  w-full  ">
          
            <FormArea/>
           </div>

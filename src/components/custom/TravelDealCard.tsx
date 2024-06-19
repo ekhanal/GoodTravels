@@ -51,7 +51,7 @@ const TravelDealCard: React.FC<Props> = ({ data }) => {
               </span>
               <div className="flex items-center gap-2">
                 <LuClock7 className="h-4 w-4 text-gray-600" />
-                <span className="text-xs text-gray-600">
+                <span className="text-sm text-gray-600">
                   {item.description}
                 </span>
               </div>
