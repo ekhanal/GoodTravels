@@ -2,10 +2,10 @@
 
 
 
-import ConfirmEmailAddress from"../../../components/form/ConfirmEmailAddress";
-import PassportExpiryDate from "../../../components/form/PassportExpireDate";
-import PassportIssueDate from "../../../components/form/PassportIssueDate";
-import YearMonthDaySelector from "../../../components/form/YearMonthDaySelector";
+import ConfirmEmailAddress from"../../../components/Form/ConfirmEmailAddress";
+import PassportExpiryDate from "../../../components/Form/PassportExpireDate";
+import PassportIssueDate from "../../../components/Form/PassportIssueDate";
+import YearMonthDaySelector from "../../../components/Form/YearMonthDaySelector";
 import CustomInput from "../../../custom/CustomInput";
 import CustomSelect from "../../../custom/CustomInputSelect";
 import { CountryList } from "../../../lib/countrylist";
@@ -18,7 +18,7 @@ import {
   SubmitHandler,
   useForm,
 } from "react-hook-form";
-import EnquiryCheckbox from "../../../components/form/EnquiryCheckbox";
+import EnquiryCheckbox from "../../../components/Form/EnquiryCheckbox";
 import { customOption } from "../../../constants/custom";
 
 
