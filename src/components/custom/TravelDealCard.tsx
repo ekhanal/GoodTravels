@@ -2,6 +2,7 @@ import { FaRegHeart } from "react-icons/fa6";
 import { LuClock7 } from "react-icons/lu";
 import { FaStar } from "react-icons/fa6";
 
+
 interface CardProps {
   name: string;
   price: string;
@@ -9,6 +10,7 @@ interface CardProps {
   image: string;
   label: string;
   status: string;
+id:string;
 }
 interface Props {
   data: CardProps[];
@@ -21,11 +23,13 @@ const TravelDealCard: React.FC<Props> = ({ data }) => {
           <div key={index} className=" bg-white shadow-md rounded-t-lg">
             <div className=" group relative ">
                 <div className="overflow-hidden hover:rounded-t-lg h-full ">
+                  <a href={`tour/tourdetails/${item.id}`}>
               <img
                 src={item.image}
                 alt={item.name}
                 className=" rounded-t-lg group-hover:scale-110 transition-transform duration-500 transform w-full h-[250px]  "
               />
+              </a>
               </div>
               <div className="flex justify-between items-center w-full absolute top-0 py-2 px-5  ">
                 <button className=" text-sm  rounded full px-3 py-1 text-white  font-medium bg-blue-700 ">

@@ -1,28 +1,23 @@
 // import { Fragment } from "react";
 import { Tab } from "@headlessui/react";
 import Card from "../custom/Card";
-
-import { DomesticData } from "../../constants/CardData";
-import { KathmanduData } from "../../constants/CardData";
-import {BhaktapurData} from "../../constants/CardData"
-import {LalitpurData} from "../../constants/CardData"
-const DomesticDestination1 = () => {
+import { InternationalData } from "../../constants/CardData";
+const DomesticDestination = () => {
   return (
     <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
       <div className="flex">
-        <Tab.Group className="w-full">
-            <div className="w-full ">
-          <div className="flex justify-between">
-            <Tab.List className="flex gap-5 md:gap-10">
+        <Tab.Group className=" w-full">
+          <div className="w-full flex flex-col md:flex-row gap-5 justify-between">
             <div className="text-3xl">
-              <span className="font-light">Domestic</span>{" "}
+              <span className="font-light">International</span>{" "}
               <span className="font-bold">Destinations</span>{" "}
             </div>
-              <Tab className="outline-none">
+            <Tab.List className="max-w-full overflow-x-auto whitespace-nowrap scroll-mx-0 flex gap-5 md:gap-10 hide-scrollbar">
+            <Tab className="outline-none">
                 {({ selected }) => (
                   <button
-                    className={`border-[1px] rounded-full px-5  ${
-                      selected ? "text-green-500 bg-green-100" : "text-black"
+                    className={`border-[1px] rounded-full px-4 py-2 ${
+                      selected ? "text-white bg-green-500" : "text-black"
                     }`}
                   >
                     ALL
@@ -32,33 +27,33 @@ const DomesticDestination1 = () => {
               <Tab className="outline-none">
                 {({ selected }) => (
                   <button
-                    className={`border-[1px] rounded-full px-5  ${
-                      selected ? "text-green-500 bg-green-100" : "text-black"
+                    className={`border-[1px] rounded-full px-4  py-2 sm:px-5 sm:py-2 flex flex-wrap ${
+                      selected ? "text-white bg-green-500" : "text-black"
                     }`}
                   >
-                   KATHMANDU
+                    ASIA
                   </button>
                 )}
               </Tab>
               <Tab className="outline-none">
                 {({ selected }) => (
                   <button
-                    className={`border-[1px] rounded-full px-5  ${
-                      selected ? "text-green-500 bg-green-100" : "text-black"
+                    className={`border-[1px] rounded-full px-4 py-2 sm:px-5 sm:py-2 flex flex-wrap ${
+                      selected ? "text-white bg-green-500" : "text-black"
                     }`}
                   >
-                  BHAKTAPUR
+                    AFRICA
                   </button>
                 )}
               </Tab>
               <Tab className="outline-none">
                 {({ selected }) => (
                   <button
-                    className={`border-[1px] rounded-full px-5  ${
-                      selected ? "text-green-500 bg-green-100" : "text-black"
+                    className={`border-[1px] rounded-full px-4 py-2 sm:px-5 sm:py-2 flex flex-wrap ${
+                      selected ? "text-white bg-green-500" : "text-black"
                     }`}
                   >
-                    LALITPUR
+                    EUROPE
                   </button>
                 )}
               </Tab>
@@ -66,23 +61,21 @@ const DomesticDestination1 = () => {
           </div>
           <Tab.Panels className="w-full">
             <Tab.Panel className="w-full">
-              <Card data={DomesticData} />
+              <Card data={InternationalData} />
             </Tab.Panel>
             <Tab.Panel>
-            <Card data={KathmanduData} />
+              <Card data={InternationalData} />
             </Tab.Panel>
             <Tab.Panel>
-            <Card data={BhaktapurData} />
+              <Card data={InternationalData} />
             </Tab.Panel>
             <Tab.Panel>
-            <Card data={LalitpurData} />
+              <Card data={InternationalData} />
             </Tab.Panel>
           </Tab.Panels>
-          </div>
         </Tab.Group>
       </div>
     </div>
   );
 };
-
-export default DomesticDestination1;
+export default DomesticDestination;

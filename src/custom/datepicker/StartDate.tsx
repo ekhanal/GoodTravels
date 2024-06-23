@@ -5,14 +5,16 @@ import { CiCalendarDate } from "react-icons/ci";
 import { Controller, useFormContext } from "react-hook-form";
 
 interface Props {
-  defaultValue?: string;
+  defaultValue?: Date;
   style?: string;
 }
 
-const StartDate: React.FC<Props> = ({ defaultValue,style }) => {
+const StartDate: React.FC<Props> = ({ defaultValue, style }) => {
   const { control, setValue } = useFormContext();
 
+  // Ensure defaultValue is a valid Date object or null
   const defaultDateValue = defaultValue ? new Date(defaultValue) : null;
+
   useEffect(() => {
     if (defaultValue) {
       setValue("start_date", defaultValue);
@@ -21,10 +23,7 @@ const StartDate: React.FC<Props> = ({ defaultValue,style }) => {
 
   return (
     <div className="w-full flex flex-col gap-2">
-      <div
-        className={`w-full flex border-[1px] border-gray-200
-        dark:border-gray-500 items-center pr-1 px-2 gap-2 rounded-md ${style} `}
-      >
+      <div className={`w-full flex border-[1px] border-gray-200 dark:border-gray-500 items-center pr-1 px-2 gap-2 rounded-md ${style || ''}`}>
         <div className="text-lg">
           <CiCalendarDate />
         </div>
@@ -35,8 +34,8 @@ const StartDate: React.FC<Props> = ({ defaultValue,style }) => {
           render={({ field: { onChange: onDateChange, value } }) => (
             <ReactDatePicker
               dateFormat="yyyy-MM-dd"
-              onChange={(dateVal: Date) => {
-                onDateChange(dateVal);
+              onChange={(date: Date | null) => {
+                onDateChange(date); // Adjust to match the expected signature
               }}
               selected={value ? new Date(value) : defaultDateValue}
               customInput={

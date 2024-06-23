@@ -10,7 +10,11 @@ import {
   useForm,
 } from "react-hook-form";
 import { formatDate } from "../../../utils/date";
+import TravelerSelect from "../../../custom/TravelerSelect";
+import { useAuthContext } from "../../../hooks/contextConsumer.hook";
 const OneWay = () => {
+  const {travelers} = useAuthContext();
+  
   const methods = useForm();
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     try {
@@ -19,7 +23,7 @@ const OneWay = () => {
         destination: data.destination,
         departdate: formatDate(data.start_date),
 
-        travelers: data.travelers,
+        travelers:travelers,
       };
       console.log(resData);
     } catch (err) {
@@ -31,7 +35,7 @@ const OneWay = () => {
       <FormProvider {...methods}>
         <form onSubmit={methods.handleSubmit(onSubmit)}>
           <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2  gap-5 px-4 pt-4">
-            <div className="w-full md:w-fit ">
+            <div className="w-full  ">
               <label htmlFor="Orgin" className="font-medium text-white text-xs">
                 Orgin
               </label>
@@ -43,7 +47,7 @@ const OneWay = () => {
                 options={DropDownConstant}
               />
             </div>
-            <div className="w-full md:w-fit ">
+            <div className="w-full  ">
               <label htmlFor="Orgin" className="font-medium text-white text-xs">
                 Destination
               </label>
@@ -55,24 +59,19 @@ const OneWay = () => {
                 options={DropDownConstant}
               />
             </div>
-            <div className="w-full md:w-fit   ">
+            <div className="w-full    ">
               <label htmlFor="Orgin" className="font-medium text-white text-xs">
                 Depart Date
               </label>
               <StartDate style="bg-white py-1.5 border" />
             </div>
 
-            <div className=" w-full md:w-fit ">
+            <div className=" w-full  ">
               <label htmlFor="Orgin" className="font-medium text-white text-xs">
                 Travelers
               </label>
 
-              <Custominputselect
-                name={"travelers"}
-                placeHolder={"-Select -"}
-                style="p-20"
-                options={DropDownConstant}
-              />
+              <TravelerSelect/>
             </div>
           </div>
           <div className="pt-5 sm:pt-8 px-4 sm:w-fit m-auto ">

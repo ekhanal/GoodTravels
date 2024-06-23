@@ -1,6 +1,6 @@
 import HeroImage from "../../assets/images/heroimage.jpg";
-import FormArea from "../Form/FormArea";
-import Button from "../custom/Button";
+import FormArea from "../MainPageForm/FormArea";
+
 
 
 const Hero = () => {

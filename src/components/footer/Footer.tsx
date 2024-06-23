@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+
 import {
   FaFacebookF,
   FaTwitter,
@@ -21,18 +21,18 @@ const Footer: React.FC = () => {
             services to our customers.
           </p>
           <div className="flex space-x-4 mt-4">
-            <NavLink to="/" className="text-gray-400 hover:text-white">
+            <a href="/" className="text-gray-400 hover:text-white">
               <FaFacebookF />
-            </NavLink>
-            <NavLink to="/" className="text-gray-400 hover:text-white">
+            </a>
+            <a href="/" className="text-gray-400 hover:text-white">
               <FaTwitter />
-            </NavLink>
-            <NavLink to="/" className="text-gray-400 hover:text-white">
+            </a>
+            <a href="/" className="text-gray-400 hover:text-white">
               <FaInstagram />
-            </NavLink>
-            <NavLink to="/" className="text-gray-400 hover:text-white">
+            </a>
+            <a href="/" className="text-gray-400 hover:text-white">
               <FaLinkedinIn />
-            </NavLink>
+            </a>
           </div>
         </div>
 
@@ -40,53 +40,50 @@ const Footer: React.FC = () => {
           <h4 className="text-lg font-medium mb-4">Services</h4>
           <ul className="space-y-2">
             <li>
-              <NavLink to="/" className="text-gray-400 hover:text-white">
+              <a href="/" className="text-gray-400 hover:text-white">
                 Flight Booking
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/" className="text-gray-400 hover:text-white">
+              <a href="/" className="text-gray-400 hover:text-white">
                 Hotel Booking
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/" className="text-gray-400 hover:text-white">
-                Tour Packages
-              </NavLink>
+              <a href="/" className="text-gray-400 hover:text-white">
+                hrefur Packages
+              </a>
             </li>
             <li>
-              <NavLink to="/" className="text-gray-400 hover:text-white">
+              <a href="/" className="text-gray-400 hover:text-white">
                 Visa Services
-              </NavLink>
+              </a>
             </li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-lg font-medium mb-4">Quick Links</h4>
-          <ul className="space-y-2">
+          <h4 className="text-lg font-medium mb-4">Quick as</h4>
+          <ul className="space-y-2" >
             <li>
-              <NavLink to="/" className="text-gray-400 hover:text-white">
-                Home
-              </NavLink>
+              <a href="/" className="text-gray-400 hover:text-white">Home</a>
+               
             </li>
             <li>
-              <NavLink to="/about" className="text-gray-400 hover:text-white">
+              <a href="/about" className="text-gray-400 hover:text-white">
                 About
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink
-                to="/destinations"
+              <a
+                href="/destinations"
                 className="text-gray-400 hover:text-white"
               >
                 Destinations
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/contact" className="text-gray-400 hover:text-white">
-                Contact
-              </NavLink>
+              <a href="/contactus" className="text-gray-400 hover:text-white"> contact_us</a>
             </li>
           </ul>
         </div>
@@ -104,12 +101,12 @@ const Footer: React.FC = () => {
             </li>
             <li className="flex items-center">
               <FaEnvelope className="mr-2" />
-              <NavLink
-                to="mailto:info@example.com"
+              <a
+                href="mailto:info@example.com"
                 className="text-gray-400 hover:text-white"
               >
                 info@example.com
-              </NavLink>
+              </a>
             </li>
           </ul>
         </div>

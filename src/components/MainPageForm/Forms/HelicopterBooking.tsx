@@ -1,4 +1,3 @@
-
 import Custominputselect from "../../../custom/CustomInputSelect";
 import Button from "../../../custom/Custombutton";
 import StartDate from "../../../custom/datepicker/StartDate";
@@ -11,16 +10,19 @@ import {
   useForm,
 } from "react-hook-form";
 import { formatDate } from "../../../utils/date";
+import TravelerSelect from "../../../custom/TravelerSelect";
+import { useAuthContext } from "../../../hooks/contextConsumer.hook";
 
-const HelicopterRescue = () => {
+const HelicopterBooking = () => {
+  const {travelers} = useAuthContext();
   const methods = useForm();
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     try {
       const resData = {
-        
+        orgin: data.orginlocation,
         destination: data.destinationlocation,
         requestdate: formatDate(data.start_date),
-        travelers: data.travelers,
+        travelers: travelers,
         name:data.name,
         phonenumber:data.phone,
       };
@@ -33,9 +35,20 @@ const HelicopterRescue = () => {
     <div>
       <FormProvider {...methods}>
         <form onSubmit={methods.handleSubmit(onSubmit)}>
-          <div className="grid  lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 lg:gap-3 gap-5  px-4 pt-4">
-          
-            <div className="w-full md:w-fit ">
+          <div className="grid xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 lg:gap-3 gap-5  px-4 pt-4">
+            <div className="w-full  ">
+              <label htmlFor="Orgin" className="font-medium text-white text-xs">
+                Orgin
+              </label>
+
+              <Custominputselect
+                name={"orginlocation"}
+                placeHolder={"Orginal Location "}
+                style=" p-10"
+                options={DropDownConstant}
+              />
+            </div>
+            <div className="w-full  ">
               <label htmlFor="Destination" className="font-medium text-white text-xs">
                 Destination
               </label>
@@ -47,32 +60,21 @@ const HelicopterRescue = () => {
                 options={DropDownConstant}
               />
             </div>
-            <div className="w-full md:w-fit   ">
+            <div className="w-full    ">
               <label htmlFor="RequestDate" className="font-medium text-white text-xs">
                 Request Date
               </label>
               <StartDate style="bg-white py-1.5 border" />
             </div>
 
-            <div className=" w-full md:w-fit ">
-              <label htmlFor="Travelers" className="font-medium text-white text-xs">
-                Travelers
-              </label>
 
-              <Custominputselect
-                name={"travelers"}
-                placeHolder={"-Select -"}
-                style="p-20"
-                options={DropDownConstant}
-              />
-            </div>
-            <div className="w-full md:w-fit">
+            <div className="w-full ">
               <label htmlFor="Name" className="font-medium text-white text-xs">
                 Name
               </label>
               <CustomInput name={"name"} placeHolder={"Name"} type={"text"} />
             </div>
-            <div className="w-full md:w-fit">
+            <div className="w-full ">
               <label htmlFor="PhoneNumber" className="font-medium text-white text-xs">
                 Phone/Mobile
               </label>
@@ -82,10 +84,17 @@ const HelicopterRescue = () => {
                 type={"number"}
               />
             </div>
+            <div className=" w-full   ">
+              <label htmlFor="Travelers" className="font-medium text-white text-xs">
+                Travelers
+              </label>
+
+              <TravelerSelect style=""/>
+            </div>
           </div>
-          <div className="pt-5 sm:pt-8 px-4 sm:w-fit m-auto ">
+          <div className="pt-5 sm:pt-8 px-4 w-full sm:w-fit m-auto ">
             <Button
-              title={"Book Helicopter Rescue"}
+              title={"Book Helicopter"}
               type="submit"
               styles="sm:px-20 py-2 text-white bg-red-600 rounded  "
             />
@@ -97,4 +106,4 @@ const HelicopterRescue = () => {
   );
 };
 
-export default HelicopterRescue;
+export default HelicopterBooking;

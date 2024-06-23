@@ -7,10 +7,12 @@ interface Props {
   placeHolder: string;
   type: string;
   required?: boolean;
+  style?:string;
 }
 
 const CustomInput: React.FC<Props> = ({
   defaultValue,
+  style,
   name,
   placeHolder,
   type,
@@ -48,7 +50,7 @@ const CustomInput: React.FC<Props> = ({
       <input
         type={type}
         defaultValue={defaultValue}
-        className="w-full outline-none py-2 px-4 border-[1px] rounded-md border-[#CACACA] text-sm  text-slate-700 "
+        className={`w-full outline-none py-2 px-4 border-[1px] rounded-md border-[#CACACA] text-sm  text-slate-700 ${style}`}
         placeholder={placeHolder}
         {...register(name, validationRules)}
       />

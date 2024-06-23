@@ -1,8 +1,9 @@
+
 import Custominputselect from "../../../custom/CustomInputSelect";
-import DropDownConstant from "../../../constants/DropDownConstant";
 import StartDate from "../../../custom/datepicker/StartDate";
-import EndDate from "../../../custom/datepicker/EndDate";
+import DropDownConstant from "../../../constants/DropDownConstant";
 import Button from "../../../custom/Custombutton";
+import { SlCalender } from "react-icons/sl";
 import {
   FieldValues,
   FormProvider,
@@ -10,7 +11,7 @@ import {
   useForm,
 } from "react-hook-form";
 import { formatDate } from "../../../utils/date";
-const TwoWay = () => {
+const OneWay = () => {
   const methods = useForm();
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     try {
@@ -18,7 +19,6 @@ const TwoWay = () => {
         orgin: data.orgin,
         destination: data.destination,
         departdate: formatDate(data.start_date),
-        returndate: formatDate(data.end_date),
         travelers: data.travelers,
       };
       console.log(resData);
@@ -30,12 +30,11 @@ const TwoWay = () => {
     <div>
       <FormProvider {...methods}>
         <form onSubmit={methods.handleSubmit(onSubmit)}>
-          <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-5 px-4 pt-4">
+          <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2  gap-5 px-4 pt-4">
             <div className="w-full md:w-fit ">
               <label htmlFor="Orgin" className="font-medium text-white text-xs">
                 Orgin
               </label>
-
               <Custominputselect
                 name={"orgin"}
                 placeHolder={"Orginal Airport "}
@@ -43,14 +42,10 @@ const TwoWay = () => {
                 options={DropDownConstant}
               />
             </div>
-            <div className="w-full md:w-fit ">
-              <label
-                htmlFor="Destination"
-                className="font-medium text-white text-xs"
-              >
+            <div className="w-full md:w-fit">
+              <label htmlFor="Orgin" className="font-medium text-white text-xs">
                 Destination
               </label>
-
               <Custominputselect
                 name={"destination"}
                 placeHolder={"Destination Airport"}
@@ -58,36 +53,19 @@ const TwoWay = () => {
                 options={DropDownConstant}
               />
             </div>
-            <div className="w-full md:w-fit   ">
-              <label
-                htmlFor="Depart Date"
-                className="font-medium text-white text-xs"
-              >
+            <div className="w-full md:w-fit">
+              <label htmlFor="DepartDate" className="font-medium text-white text-xs">
                 Depart Date
               </label>
-
-              <StartDate style="bg-white py-1.5 border" />
+              <div className="flex items-center bg-white py-1.5 rounded">
+              <SlCalender className="h-6 w-6 mx-2 text-gray-400" />
+              <StartDate style="border-white"/>
+              </div>
             </div>
-
-            <div className=" w-full md:w-fit ">
-              <label
-                htmlFor="Return Date"
-                className="font-medium text-white text-xs"
-              >
-                Return Date
-              </label>
-
-              <EndDate style="py-1.5 bg-white" />
-            </div>
-
-            <div className=" w-full md:w-fit ">
-              <label
-                htmlFor="Travelers"
-                className="font-medium text-white text-xs"
-              >
+            <div className=" w-full md:w-fit">
+              <label htmlFor="Traveler" className="font-medium text-white text-xs">
                 Travelers
               </label>
-
               <Custominputselect
                 name={"travelers"}
                 placeHolder={"-Select -"}
@@ -96,7 +74,7 @@ const TwoWay = () => {
               />
             </div>
           </div>
-          <div className="pt-5 sm:pt-8 px-4 w-full sm:w-fit m-auto ">
+          <div className="pt-5 sm:pt-8 px-4 sm:w-fit m-auto ">
             <Button
               title={"Search Flights"}
               type="submit"
@@ -108,5 +86,4 @@ const TwoWay = () => {
     </div>
   );
 };
-
-export default TwoWay;
+export default OneWay;

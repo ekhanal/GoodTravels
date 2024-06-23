@@ -102,6 +102,7 @@ export const LalitpurData=[
 
 export const TravelData=[
   {
+    id:"1",
     name: "Annapurna Poonhill Sunrise Trek",
     price:"Rs.1000",
     description: "7 Days 6 Nights ",
@@ -110,6 +111,7 @@ export const TravelData=[
     status: "0 (No Review)"
   },
   {
+    id:"2",
     name: "Everest Gokyo Lake Trek",
     price:"Rs. 1500",
     description: "15 Days 14 Nights ",
@@ -118,6 +120,7 @@ export const TravelData=[
     status: "No Review"
   },
   {
+    id:"3",
     name: "Best Island of Thailand",
     price:"Rs. 1000",
     description: "5 Nights 6 Days ",
@@ -127,6 +130,50 @@ export const TravelData=[
   },
 
 ];
+export const itinerary= [
+  {
+    id:"1",
+    day:"1",
+    title: "Annapurna Poonhill Sunrise Trek",
+    price:"Rs.1000",
+    description: "7 Days 6 Nights ",
+    image: Annapurna,
+    label: "Featured",
+    status: "0 (No Review)"
+  },
+  {
+    id:"2",
+    day:"2",
+    title: "Everest Gokyo Lake Trek",
+    price:"Rs. 1500",
+    description: "15 Days 14 Nights ",
+    image: Gokyo,
+    label: "Featured",
+    status: "No Review"
+  },
+  {
+    id:"3",
+    day:"3",
+    title: "Best Island of Thailand",
+    price:"Rs. 1000",
+    description: "5 Nights 6 Days ",
+    image: Thailand ,
+    label: "Featured",
+    status: "No Review"
+  },
 
+]
+export const InclusionData = [
+  "Stay",
+  "Rhine Falls 15-Minute Boat Tout, Switzerland on a Shared Basis",
+  "Meals",
+  "Transport",
+  "Sighteseeing"
+ ];
+ export const ExclusionData = [
+   "Flights",
+   "Visa",
+   "Insurance",
+ ];
 
  
