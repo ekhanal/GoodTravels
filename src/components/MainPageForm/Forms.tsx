@@ -17,7 +17,7 @@ const Forms:React.FC<Props> = ({button1,button2,tabform1,tabform2}) => {
       
           <TabGroup>
             <TabList>
-              <div className="flex gap-5 px-4">
+              <div className="flex gap-5 px-4 ">
                 <Tab className="outline-none">
                   {({ selected }) => (
                     <Button

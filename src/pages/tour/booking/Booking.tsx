@@ -1,29 +1,20 @@
-
-
-
-
-import ConfirmEmailAddress from"../../../components/form/ConfirmEmailAddress";
-import PassportExpiryDate from "../../../components/form/PassportExpireDate";
-import PassportIssueDate from "../../../components/form/PassportIssueDate";
-import YearMonthDaySelector from "../../../components/form/YearMonthDaySelector";
+import ConfirmEmailAddress from "../../../components/Form/ConfirmEmailAddress";
+import PassportExpiryDate from "../../../components/Form/PassportExpireDate";
+import PassportIssueDate from "../../../components/Form/PassportIssueDate";
+import YearMonthDaySelector from "../../../components/Form/YearMonthDaySelector";
 import CustomInput from "../../../custom/CustomInput";
 import CustomSelect from "../../../custom/CustomInputSelect";
 import { CountryList } from "../../../lib/countrylist";
 
-
-import  {  useState } from "react";
+import { useState } from "react";
 import {
   FieldValues,
   FormProvider,
   SubmitHandler,
   useForm,
 } from "react-hook-form";
-import EnquiryCheckbox from "../../../components/form/EnquiryCheckbox";
+import EnquiryCheckbox from "../../../components/Form/EnquiryCheckbox";
 import { customOption } from "../../../constants/custom";
-
-
-
-
 
 const Booking = () => {
   const [traveler, setTraveler] = useState(1);
@@ -79,8 +70,6 @@ const Booking = () => {
             </div>
           </div>
 
-    
-
           <div className="flex flex-col gap-5 pt-10">
             <div className="flex items-center gap-3 ">
               <div className="bg-[#3DB368] flex items-center justify-center h-8 w-8 rounded-full text-lg text-white ">
@@ -96,7 +85,6 @@ const Booking = () => {
                 </div>
                 <div className="flex flex-col md:flex-row gap-5 ">
                   <div className="w-full flex flex-col gap-5 md:gap-2 md:flex-row">
-                    
                     <CustomInput
                       type="text"
                       placeHolder="First Name"
@@ -132,7 +120,6 @@ const Booking = () => {
                     <CustomSelect
                       placeHolder="Select Nationality"
                       name="nationality"
-                      
                       options={options}
                     />
                   </div>
@@ -153,7 +140,6 @@ const Booking = () => {
                   <CustomSelect
                     placeHolder="Country Code"
                     name="countryCode"
-                    
                     options={customOption}
                   />
                 </div>
@@ -173,7 +159,6 @@ const Booking = () => {
                   <CustomSelect
                     placeHolder="Select place of issue"
                     name="passportPlaceOfIssue"
-                    
                     options={options}
                   />
                 </div>

@@ -12,9 +12,6 @@ import Button from "../../custom/Custombutton"
 import {formatDate} from "../../utils/date"
 import TravelerSelect from "../../custom/TravelerSelect";
 
-
-
-
 import { useAuthContext } from "../../hooks/contextConsumer.hook";
 import { useNavigate } from "react-router-dom";
 

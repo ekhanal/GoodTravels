@@ -15,12 +15,12 @@ const FormArea = () => {
     <div className="">
       <TabGroup>
         <TabList>
-          <div className=" flex flex-wrap gap-2 md:gap-4 py-5">
+          <div className=" flex overflow-x-auto gap-2 md:gap-4 py-5">
             <Tab className="outline-none">
               {({ selected }) => (
                 <Button
                   title={"Flights"}
-                  styles={`  px-4 py-1  ${
+                  styles={`  px-4 py-1  whitespace-nowrap ${
                     selected
                       ? "text-white bg-[#ec131b] "
                       : "text-black bg-white"
@@ -32,7 +32,7 @@ const FormArea = () => {
               {({ selected }) => (
                 <Button
                   title={"Mountains Flights"}
-                  styles={` text-black px-4 py-1  ${
+                  styles={` text-black px-4 py-1  whitespace-nowrap ${
                     selected
                       ? "text-white bg-[#ec131b] "
                       : "bg-white text-black"
@@ -45,7 +45,7 @@ const FormArea = () => {
               {({ selected }) => (
                 <Button
                   title={" Tour Packages"}
-                  styles={` text-black px-4 py-1  ${
+                  styles={` text-black px-4 py-1 whitespace-nowrap ${
                     selected
                       ? "text-white bg-[#ec131b] "
                       : "bg-white text-black"
@@ -58,7 +58,7 @@ const FormArea = () => {
               {({ selected }) => (
                 <Button
                   title={"Vechicle"}
-                  styles={` text-black px-4 py-1  ${
+                  styles={` text-black px-4 py-1 whitespace-nowrap ${
                     selected
                       ? "text-white bg-[#ec131b] "
                       : "bg-white text-black"

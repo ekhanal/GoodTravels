@@ -96,7 +96,7 @@ const TwoWay = () => {
           </div>
           <div className="pt-5 sm:pt-8 px-4 w-full sm:w-fit m-auto ">
             <Button
-              title={"Search Flights"}
+              title={"Enquiry"}
               type="submit"
               styles=" sm:px-20 py-2 text-white bg-red-600 rounded  "
             />

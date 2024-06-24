@@ -23,10 +23,10 @@ const StartDate: React.FC<Props> = ({ defaultValue, style }) => {
 
   return (
     <div className="w-full flex flex-col gap-2">
-      <div className={`w-full flex border-[1px] border-gray-200 dark:border-gray-500 items-center pr-1 px-2 gap-2 rounded-md ${style || ''}`}>
-        <div className="text-lg">
+      <div className={`w-full flex border-[1px] border-gray-200  items-center pr-1 px-2 gap-2 rounded-md ${style || ''}`}>
+        <div className="text-lg text-black">
           <CiCalendarDate />
-        </div>
+        </div> 
         <Controller
           control={control}
           name="start_date"
@@ -39,12 +39,12 @@ const StartDate: React.FC<Props> = ({ defaultValue, style }) => {
               }}
               selected={value ? new Date(value) : defaultDateValue}
               customInput={
-                <input className="w-full outline-none dark:bg-[#182235] border-none" />
+                <input className="w-full outline-none  border-none text-black" />
               }
               placeholderText={"Select Specific Date"}
               autoComplete="off"
-              className="w-full text-sm text-gray-400"
-              wrapperClassName="w-full border-none outline-none dark:bg-[#182235]"
+              className="w-full text-sm text-black"
+              wrapperClassName="w-full border-none outline-none "
             />
           )}
         />

@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-blue-500 text-white py-4 px-4 z-20">
+      <nav className="sticky top-0 bg-blue-500 text-white py-4 px-4 z-20">
         <div className="container mx-auto flex items-center justify-between">
           <NavLink to="/" className="flex items-center">
             <img src={goodtravels} alt="Goodday Logo" className="h-8 mr-2" />

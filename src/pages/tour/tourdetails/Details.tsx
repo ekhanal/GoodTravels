@@ -9,12 +9,12 @@ import IncludedExcluded from "../../../components/details/IncludedExcluded";
 
 import Review from "../../../components/details/Reviews";
 const Details = () => {
-  let { id } = useParams();
- 
- 
+  const { id } = useParams();
+
+  console.log({ id });
+
   return (
     <div>
-      
       <div>
         {TravelData.map((item, index) => (
           <div key={index} className="">
@@ -39,7 +39,10 @@ const Details = () => {
                         </span>
                       </p>
                       <div className=" flex justify-center items-center pb-5">
-                        <Button title={"Enquiry"} styles="text-white  py-1.5 w-[200px] bg-[#1d4ed8]" />
+                        <Button
+                          title={"Enquiry"}
+                          styles="text-white  py-1.5 w-[200px] bg-[#1d4ed8]"
+                        />
                       </div>
                     </div>
                   </div>
@@ -97,7 +100,7 @@ const Details = () => {
                       </div>
                       <div className=" ">
                         <h2 className="text-2xl font-bold  pb-5">Itinerary</h2>
-                        <Itinerary/>
+                        <Itinerary />
                       </div>
                     </div>
                     <div className="self-start hidden md:block">
@@ -105,17 +108,19 @@ const Details = () => {
                       <EnquiryForm />
                     </div>
                   </div>
-                  <div><IncludedExcluded/></div>
+                  <div>
+                    <IncludedExcluded />
+                  </div>
                   <div>
                     <GoodToKnow />
                   </div>
                   <div className="self-start pt-10 md:hidden block">
-                      {" "}
-                      <EnquiryForm />
-                    </div>
-                    <div>
-                      <Review/>
-                    </div>
+                    {" "}
+                    <EnquiryForm />
+                  </div>
+                  <div>
+                    <Review />
+                  </div>
                 </div>
               </div>
             ) : (
